@@ -1,0 +1,103 @@
+1.Prime or Not Prime
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int count = 0;
+        for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                count = 1;
+                break;
+            }
+        }
+        System.out.println((count == 0) ? "prime" : "not prime");
+    }
+}
+
+
+2.Factorial of a Number
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        System.out.println(fact);
+    }
+}
+
+3.Sum of Digits
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int x, sum = 0;
+        while (n != 0) {
+            x = n % 10;
+            sum = sum + x;
+            n = n / 10;
+        }
+        System.out.print(sum);
+    }
+}
+
+4.Reverse a Number
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int x, rev = 0;
+        while (a != 0) {
+            x = a % 10;
+            rev = rev * 10 + x;
+            a = a / 10;
+        }
+        System.out.print(rev);
+    }
+}
+
+5.Palindrome or Not
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int temp = a;
+        int x, rev = 0;
+        while (a != 0) {
+            x = a % 10;
+            rev = rev * 10 + x;
+            a = a / 10;
+        }
+        System.out.print((rev == temp) ? "palindrome" : "not palindrome");
+    }
+}
+
+6.Armstrong Number or Not
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int originalNumber, remainder, result = 0;
+        originalNumber = number;
+        while (originalNumber != 0) {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+        System.out.print((result == number) ? "Armstrong" : "Not Armstrong");
+    }
+}
+
